@@ -70,8 +70,8 @@
 
             foreach ($comments as $comment)
             {
-                echo $comment["datetimecomment"]." from ".$comment["username"]."<br>";
-                echo $comment["comment"]."<br><br>";
+                echo $comment["datetimecomment"]." from ".htmlspecialchars($comment["username"])."<br>";
+                echo htmlspecialchars($comment["comment"])."<br><br>";
             }
 
         ?>
